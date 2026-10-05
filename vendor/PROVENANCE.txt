@@ -1,0 +1,3 @@
+source_revision=2b968e603ec6665e5bd354e0524a3caebdd4641c
+core_version=0.1.0
+coordinate=dev.omnific.herald:herald-core:0.1.0

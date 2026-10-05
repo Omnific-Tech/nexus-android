@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "41225206302",
+    "project_id": "omnific-888888",
+    "storage_bucket": "omnific-888888.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41225206302:android:303833390fa095019a8c0f",
+        "android_client_info": {
+          "package_name": "dev.omnific.nexus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWXLOx1yzJ_-kjMeEjfrcfrBqYbHaKd_E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

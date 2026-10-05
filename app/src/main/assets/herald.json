@@ -1,0 +1,21 @@
+{
+  "herald_url": "https://herald.omnific.dev",
+  "application": "nexus",
+  "origin": "https://nexus.omnific.dev",
+  "start_url": "https://nexus.omnific.dev/",
+  "web_subscription_bridge": true,
+  "channels": [
+    {
+      "id": "alerts",
+      "name": "Alerts",
+      "description": "Time-critical notifications",
+      "importance": "high"
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "description": "Service and account messages",
+      "importance": "default"
+    }
+  ]
+}
