@@ -1,0 +1,3 @@
+# Reviewed public Firebase client configuration, not a server credential.
+# Exact finding only; future configuration changes require another review.
+b7ebdade64c3f17f0d8d02fd4c5c62e3f69e4754:app/google-services.json:gcp-api-key:18
