@@ -29,7 +29,9 @@ checks the expected application ID/certificate before publishing checksums and
 APK. Version codes must increase beyond every previous release of this app.
 
 Configure signing secrets through repository settings and preserve an independent
-keystore backup. Set `herald.signingCertificate` to the existing certificate for
+keystore backup. APK publication stays disabled until the operator sets
+`ANDROID_ROLLOUT_ENABLED=true` after physical-device verification.
+Set `herald.signingCertificate` to the existing certificate for
 an app already installed by users. App ID, certificate and Digital Asset Links
 must stay compatible for in-place upgrades and verified TWA/bridge behavior.
 
