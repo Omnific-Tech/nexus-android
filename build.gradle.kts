@@ -21,7 +21,9 @@ tasks.register<Copy>("prepareHerald") {
 
 subprojects {
     tasks.configureEach {
-        if (name == "preBuild") dependsOn(rootProject.tasks.named("prepareHerald"))
+        if (name == "preBuild" || name.endsWith("OssDependencyTask") || name == "collectReleaseDependencies") {
+            dependsOn(rootProject.tasks.named("prepareHerald"))
+        }
     }
 }
 
