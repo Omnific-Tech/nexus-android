@@ -39,6 +39,11 @@ Source tag and vendored library provenance identify release source. Checksums
 verify downloaded bytes; independently building verifies the source pipeline.
 A locally signed debug APK cannot replace an installation signed by release key.
 
+Dependency terms and embedded copyright notices are retained in the APK.
+Run `./gradlew :app:releaseNotices` to verify them and export the matching
+notice ZIP. CI retains this ZIP and publishes it alongside signed releases.
+See [dependency notices](third_party/README.md) for collection details.
+
 ## Device verification
 
 Before release, upgrade an existing installation in place; check saved
