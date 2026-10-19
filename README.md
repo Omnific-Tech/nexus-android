@@ -12,6 +12,8 @@ Nexus for Android opens [Nexus Terminal](https://nexus.omnific.dev/) in a Truste
 
 This repository contains the **Android app**: its identity, configuration, icons, and release pipeline. The terminal frontend and backend are maintained separately. Shared Android behavior comes from [Herald Android](https://github.com/Omnific-Tech/herald-android-oss).
 
+![Nexus Terminal macro dashboard with market regime, narrative arc, and market watch](docs/images/nexus-macro.webp)
+
 ## Install
 
 1. Open [GitHub Releases](https://github.com/Omnific-Tech/nexus-android/releases/latest) and download the `.apk` asset.
