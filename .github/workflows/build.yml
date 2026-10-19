@@ -45,7 +45,7 @@ jobs:
           retention-days: 7
 
   release:
-    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && vars.ANDROID_ROLLOUT_ENABLED == 'true'
+    if: github.event_name == 'workflow_dispatch'
     concurrency:
       group: app-release
       cancel-in-progress: false
@@ -108,10 +108,18 @@ jobs:
           "$signer" verify --print-certs "release/product-$VERSION_NAME.apk" \
             | grep 'certificate SHA-256 digest:' > release/SIGNING-CERTIFICATE.txt
           (cd release && sha256sum ./*.apk ./*.zip > SHA256SUMS)
+      - name: Retain signed candidate for device verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: nexus-android-${{ inputs.version_code }}
+          path: release/
+          retention-days: 14
+          if-no-files-found: error
       - name: Publish release from reviewed source
+        if: github.ref == 'refs/heads/main' && vars.ANDROID_ROLLOUT_ENABLED == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           gh release create "app-$VERSION_CODE" release/* --target "$GITHUB_SHA" \
-            --title "App $VERSION_NAME" --generate-notes
+            --title "Nexus for Android $VERSION_NAME" --generate-notes
