@@ -16,3 +16,4 @@ products/ci/
 
 .DS_Store
 .idea/
+.kotlin/
